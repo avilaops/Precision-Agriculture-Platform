@@ -1,0 +1,112 @@
+{
+  "field_id": "F001-UsinaGuarani-Piracicaba",
+  "analysis_id": "A20260220-001",
+  "analysis_date": "2026-02-20T08:30:00Z",
+  "crop": "sugarcane",
+  "season": "2025-2026",
+  "harvest_number": 4,
+  "total_area_ha": 130,
+  "zones": [
+    {
+      "zone_id": "Z001",
+      "area_ha": 50.2,
+      "avg_yield_t_ha": 45.3,
+      "expected_yield_t_ha": 85.0,
+      "profitability_score": 0.32,
+      "status": "critical",
+      "recommendation": {
+        "action": "reform",
+        "priority": "high",
+        "reason": "Produtividade abaixo de 50% do esperado após 4 cortes"
+      },
+      "financial_impact": {
+        "current_revenue_brl_year": 180000,
+        "expected_revenue_brl_year": 300000,
+        "estimated_loss_brl_year": 120000,
+        "reform_cost_brl": 8000,
+        "payback_months": 8
+      },
+      "interventions": [
+        {
+          "type": "reforma completa",
+          "cost_brl_ha": 8000,
+          "expected_roi": 15.0,
+          "timeframe_months": 18
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-47.6234, -22.7123],
+            [-47.6198, -22.7123],
+            [-47.6198, -22.7089],
+            [-47.6234, -22.7089],
+            [-47.6234, -22.7123]
+          ]
+        ]
+      }
+    },
+    {
+      "zone_id": "Z002",
+      "area_ha": 79.8,
+      "avg_yield_t_ha": 95.2,
+      "expected_yield_t_ha": 90.0,
+      "profitability_score": 0.89,
+      "status": "optimal",
+      "recommendation": {
+        "action": "maintain",
+        "priority": "low",
+        "reason": "Produtividade acima da média, manter manejo atual"
+      },
+      "financial_impact": {
+        "current_revenue_brl_year": 600000,
+        "expected_revenue_brl_year": 550000,
+        "estimated_gain_brl_year": 50000,
+        "maintenance_cost_brl_year": 12000,
+        "net_gain_brl_year": 38000
+      },
+      "interventions": [
+        {
+          "type": "manutenção preventiva",
+          "cost_brl_ha": 150,
+          "expected_roi": 3.17,
+          "timeframe_months": 12
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-47.6198, -22.7123],
+            [-47.6145, -22.7123],
+            [-47.6145, -22.7089],
+            [-47.6198, -22.7089],
+            [-47.6198, -22.7123]
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_estimated_impact_brl": 158000,
+    "zones_critical": 1,
+    "zones_warning": 0,
+    "zones_optimal": 1,
+    "avg_profitability_score": 0.605,
+    "recommended_actions": {
+      "reform": 1,
+      "maintain": 1,
+      "intervene": 0
+    }
+  },
+  "metadata": {
+    "model_version": "v1.0.0",
+    "data_sources": [
+      "yield_monitor_2022_2026",
+      "soil_analysis_2025",
+      "satellite_ndvi_sentinel2"
+    ],
+    "confidence_level": 0.87
+  }
+}
